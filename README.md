@@ -1,4 +1,4 @@
-# Code_BasicsAM
-C and Assembly Tasks
+# C_Assembly_Tasks
 
-Basic C and Assembly(x86) Programs 
+Assembly x86 programs using Nasm
+
