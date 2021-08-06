@@ -1,6 +1,5 @@
-# Code_BasicsAM
-C and Assembly Tasks
+# C_Assembly_Tasks
 
-Basic C and Assembly(x86) Programs 
+Basic C Programs 
 
 Commands for Compiling and executing C program using GCC.
