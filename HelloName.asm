@@ -1,7 +1,7 @@
 	; Rohitha_Karumanchi
-  ; 64 bit, Hello World Program (Getting input)
+        ; 64 bit, Hello World Program (Getting input)
 	; Go to end for Execution COmmands and Output
-  ; Asks user for name and prints "Hello , Name".
+        ; Asks user for name and prints "Hello , Name".
 
 	 
 		 
@@ -27,7 +27,7 @@
 	  int 0x80         ; perform system call
 	 
 	  ;Reading name from user
-    mov     rdx, 255       ; number of bytes to read
+          mov     rdx, 255       ; number of bytes to read
 	  mov     rcx, sinput    ; reserved space to store our input (known as a buffer)
 	  mov     rbx, 0         ; write to the STDIN file
 	  mov     rax, 3         ; invoke SYS_READ (kernel opcode 3)
@@ -54,7 +54,7 @@
 	  int 0x80
   
   
-  ; Compile with  :   $ nasm -f elf64 HelloName.asm                                                         
+        ; Compile with  :   $ nasm -f elf64 HelloName.asm                                                         
  	; Link with     :   $ ld HelloWorldName.o -o HelloName 
  	; Run with      :   $./HelloName            
 	; Please enter your name: Rohitha
