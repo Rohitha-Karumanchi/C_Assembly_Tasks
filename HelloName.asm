@@ -20,11 +20,11 @@
 	_start:
 	 
 	  ;Asking user to enter name  
-	  mov rax, 4     ; sys_write system call
-	  mov rbx, 1     ;stdout file description
-	  mov rcx, msg1  ;bytes to write
+	  mov rax, 4        ; sys_write system call
+	  mov rbx, 1        ;stdout file description
+	  mov rcx, msg1     ;bytes to write
 	  mov rdx, len1     ; number of bytes to write
-	  int 0x80         ; perform system call
+	  int 0x80          ; perform system call
 	 
 	  ;Reading name from user
           mov     rdx, 255       ; number of bytes to read
@@ -34,15 +34,15 @@
 	  int     80h
 	 
 	  ;Displaying "Hello, " on console  
-	  mov rax, 4     ; sys_write system call
-	  mov rbx, 1     ;stdout file description
-	  mov rcx, msg2  ;bytes to write
+	  mov rax, 4        ; sys_write system call
+	  mov rbx, 1        ;stdout file description
+	  mov rcx, msg2     ;bytes to write
 	  mov rdx, len2     ; number of bytes to write
 	  int 0x80         ; perform system call
 	 
 	  ;Displaying name on console  
-	  mov rax, 4     ; sys_write system call
-	  mov rbx, 1     ;stdout file description
+	  mov rax, 4       ; sys_write system call
+	  mov rbx, 1       ;stdout file description
 	  mov rcx, sinput  ;bytes to write
 	  mov rdx, 255     ; number of bytes to write
 	  int 0x80         ; perform system call
