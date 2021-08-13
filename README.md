@@ -1,6 +1,6 @@
 #C_Assembly_Tasks
 
-Basic C and Assembly(x86) Programs 
+C and Assembly(x86) Programs 
 
 Commands for using GCC
 
