@@ -82,3 +82,27 @@ int intfun(char s[], int b)
 				intfun(s,b);
 				return 0;
 			}
+
+/*
+Output1:
+Enter a number string : 234234234
+Enter the base 2: for binary, 8 for octal, 16 for hexavalue : 2
+Base is Decimal
+Decimal value of String is : 234234234
+
+Output2:
+Enter a number string : 79
+Enter the base 2: for binary, 8 for octal, 16 for hexavalue : 8
+Base is Octal
+Octal Value is : 117
+
+Output3:
+Enter a number string : 64
+Enter the base 2: for binary, 8 for octal, 16 for hexavalue : 16
+Base is Hexavalue
+Hexa value is : 40
+
+Output4:
+Enter a number string : 678
+Enter the base 2: for binary, 8 for octal, 16 for hexavalue : 4
+Please enter valid base
