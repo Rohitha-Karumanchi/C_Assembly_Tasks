@@ -1,9 +1,11 @@
 //Implementing the python int() function in C.
+//Implements the python int() function in C. Like atoi(char* ptr, int base) to return the integer stored at the pointer ptr.
+//The function accepts a pointer to a string and an integer mode as arguments and outputs the appropriate number.
 
 #include<stdio.h>
 #include<string.h>
 
-void intfun(char s[], int b)
+int intfun(char s[], int b)
 			{
 				// Initialize a variable
 				int num = 0;
@@ -16,22 +18,26 @@ void intfun(char s[], int b)
 					// Subtract 48 from the current digit , ASCII values of  digits from 0 to 9 start from 48 – 57.
 					num = num * 10 + (s[i] - 48);
        					 }
-				// Print the answer
-				//printf("%d", num);
+				
 				if (b==2){
 			        	printf("Base is Decimal\n");
-			        	printf("Decimal value of String is %d ",&num);
+			        	printf("Decimal value of String is %d ",num);
 			        	}
 			       else if (b==8){
 			      		     printf("Base is octal\n");
-			        	     //char format= "%o";
-			        	     //vfprintf(stdout,format,num);
-			        	     printf("Octal value of string is %o", &num);
+			        	     int dn=num;
+                   			     int i=1;
+                    			     int ocno=0;
+				             for(int j=num;j>0;j=j/8)
+                                             {
+                                               ocno=ocno+(j % 8)*i;
+                                               i=i*10;
+                                               num=num/8;
+                                             }
+			                    printf("Octal Value is : %d", ocno);
 			        	   }
 			    	else if (b==16){
 			        		printf("Base is hexavalue\n");
-			        		//char format= "%x";
-			        		//vfprintf(stdout,format,num);
 			        		int decimalNumber=num;
 			        		int quotient = decimalNumber;
 			        		char hexadecimalNumber[100];
@@ -51,8 +57,7 @@ void intfun(char s[], int b)
                        				printf("Hexa value is : ");
                     				for (int j = i -1 ;j> 0;j--)
                         				printf("%c",hexadecimalNumber[j]);
-                    				//printf("hexavalue value of string is 0x%08x ", &num);
-			    			}
+                    				}
 			    	else{
 			        	printf("Please enter valid base\n");
 			        	return 0;
